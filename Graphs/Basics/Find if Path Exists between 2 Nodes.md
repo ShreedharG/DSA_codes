@@ -40,31 +40,37 @@ public:
 ```
 class Solution {
 public:
-    bool dfs_traversal(int node,int dest,vector<vector<int>>& graph,vector<bool>& vis){
-        if(node == dest) return true;
+    bool dfs(int node,int destination,vector<vector<int>>& graph,vector<bool>& vis){
+        if(node == destination)
+            return true;
+            
+        for(auto child : graph[node]){
+            if(!vis[child]){
+                vis[child] = true;
+                if(dfs(child,destination,graph,vis))
+                    return true;
+            }
+        }
+        return false;
+    }
 
-        vis[node] = true;
-        for(auto child : graph[node]){
-            if(vis[child] == false){
-                if(dfs_traversal(child,dest,graph,vis))
-                    return true;
-            }          
-        }
-        return false;
-    }
+    bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
+        if(source == destination)
+            return true;
 
-    bool validPath(int n,vector<vector<int>>& edges,int source, int destination) {
-        if(source == destination) return true;
+        vector<vector<int>> graph(n);
+        for(auto e : edges){
+            int u = e[0], v = e[1];
+            
+            graph[u].push_back(v);
+            graph[v].push_back(u);
+        }
 
-        vector<vector<int>> graph(n);
-        for(int i=0; i<edges.size(); i++){
-            graph[edges[i][0]].push_back(edges[i][1]);
-            graph[edges[i][1]].push_back(edges[i][0]);
-        }
-
-        vector<bool> vis(n,false);
-        return dfs_traversal(source,destination,graph,vis);
-    }
+        vector<bool> vis(n, false);
+        vis[source] = true;
+        
+        return dfs(source,destination,graph,vis);
+    }
 };
 ```
 
