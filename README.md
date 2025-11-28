@@ -1,6 +1,6 @@
-# 🧠 DSA Boss Notes
+# 🧠 DSA Notes
 
-This repository contains my complete Data Structures & Algorithms learning journey — including **300+ solved problems**, handwritten notes, patterns, and summaries.
+This repository contains my complete Data Structures & Algorithms learning journey including **300+ solved problems**, handwritten notes, patterns, and summaries.
 
 The purpose of this repo is to build a strong foundation for **coding interviews, competitive programming, and placement preparation.**
 
@@ -46,7 +46,7 @@ All topics are organized folder-wise for easy navigation and revision:
 
 ## 🎯 Goal
 
-> Build a complete, searchable, revision-friendly archive to strengthen logic, pattern recognition, and interview readiness for any SDE aspirant — beyond just solving problems.
+> Build a complete, searchable, revision-friendly archive to strengthen logic, pattern recognition, and interview readiness for any SDE aspirant beyond just solving problems.
 
 ---
 
@@ -66,9 +66,9 @@ This is a personal learning archive, but suggestions, improvements, and discussi
 
 ## ⭐ Show Support
 
-If this repo helps you or you want to revisit it later — consider giving it a star!
+If this repo helps you or you want to revisit it later consider giving it a star!
 
 ---
 
-### 🏁 _“DSA is not about remembering questions — it’s about understanding patterns.”_  
-💬 — me, pretending to sound wise 😅
+### 🏁 _“DSA is not about remembering questions, it’s about understanding patterns.”_  
+💬 - me, pretending to sound wise 😅
