@@ -1,0 +1,19 @@
+Linear data structure storing only one type of data (like int, char etc...).
+
+##### Questions
+- [[Majority Element]]
+- [[Majority Element II]]
+- [[Is Subsequence]]
+- [[Remove Element]]
+- [[Plus One]]
+- [[Pascal's Triangle]]
+- [[Contains Duplicate]]
+- [[Contains Duplicate II]]
+- [[Summary Ranges]]
+- [[Intersection of 2 Arrays]]
+- [[Intersection of 2 Arrays II]]
+- [[3rd Highest Number]]
+- [[Perimeter]]
+- [[Check Monotonic]]
+- [[Subarray Sum Equals K]]
+- 
