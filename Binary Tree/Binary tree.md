@@ -26,10 +26,4 @@ class TreeNode{
 - [[Serialising and De-serialising]]
 - [[Binary search tree]]
 - [[Root to Leaf Target Sum]]
-- 
-
-
-
-
-
-
+- [[Populating Node with Right Node]]

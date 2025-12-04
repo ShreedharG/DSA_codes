@@ -1,10 +1,11 @@
 #  DSA: Data structures + algorithms
 ##### Data Structures 
-- Arrays
+- Arrays/Strings
 - Binary Tree
 - Linked List
-- Stack
+- Stack/Queue
 - Graphs
+- Design Problems
 
 ##### Algorithms
 - Sorting Algos
@@ -13,5 +14,3 @@
 - Recursion + Backtracking
 - Dynamic Programming
 - Sliding Window
-
-
