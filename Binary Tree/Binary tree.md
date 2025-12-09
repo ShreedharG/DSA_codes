@@ -26,4 +26,6 @@ class TreeNode{
 - [[Serialising and De-serialising]]
 - [[Binary search tree]]
 - [[Root to Leaf Target Sum]]
+- [[Root to Leaf All Sums]]
+- [[Average of Levels]]
 - [[Populating Node with Right Node]]
