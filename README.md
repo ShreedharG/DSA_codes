@@ -25,6 +25,7 @@ All topics are organized folder-wise for easy navigation and revision:
 | 🧮 Sorting Algorithms | Basic to optimized sorting approaches and theory |
 | 🧱 Heaps | Priority queues, top-k problems, scheduling logic |
 | 🧵 Strings | Pattern matching, hashing, frequency problems |
+| 💹 SQL | Filtering, Sorting, Joins, Subquery problems | 
 
 ---
 
@@ -38,7 +39,7 @@ All topics are organized folder-wise for easy navigation and revision:
 
 ## 🧰 Tech & Tools
 
-- **Language:** C++  
+- **Language:** C++, MySQL  
 - **Note System:** Obsidian  
 - **Version Control:** Git & GitHub  
 
@@ -52,9 +53,9 @@ All topics are organized folder-wise for easy navigation and revision:
 
 ## 🛠 Future Additions
 
-- 🧱 Core CS Fundamentals (OS, DBMS, CN)
+- 🧱 Core CS Fundamentals (OS, CN)
+- 💡 Add system design cases
 - 👱🏻 HR/Project QnA template
-- 📌 Coding templates for contests  
 
 
 
