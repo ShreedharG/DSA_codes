@@ -1,6 +1,5 @@
-##### Phase 1 - Design User Abstract Class and Extend User to Rider + Driver
+// System Design LLD code for ride sharing system
 
-```cpp
 #include <string>
 #include <algorithm>
 #include <stdexcept>
@@ -48,7 +47,7 @@ public:
     string getMobileNumber() const { return mobileNumber; }
     double getRating() const { return rating; }
     
-    void updateRating ( double newRating ) {
+    virtual void updateRating ( double newRating ) {
         this->rating = newRating;
     }
 
@@ -60,6 +59,13 @@ class Rider : public User {
 public:
     Rider(const string& id, const string& name, Gender gender, const string& mobile, const string& aadhar, double initialRating)
         : User(id, name, gender, mobile, aadhar, initialRating) {}
+
+    void updateRating(double newRating) override {
+        rating = rating*0.9 + newRating*0.1;
+
+        if(rating > 5.0) rating = 5.0;
+        if(rating < 1.0) rating = 1.0;
+    }
 
     string getRole () const override {
         return "RIDER";
@@ -80,6 +86,16 @@ public:
     bool getAvailability() const {  return availability; }
     Vehicle* getVehicle() const { return vehicle; }
     
+    void updateRating(double newRating) override {
+        if (newRating > rating) // good behaviour is rewarded quickly
+            rating = rating*0.9 + newRating*0.2;
+        else if ( newRating < rating) // bad reviews isn't penalise dratically
+            rating = rating*0.9 + newRating*0.05;
+        
+        if(rating > 5.0) rating = 5.0;
+        if(rating < 1.0) rating = 1.0;
+    }
+
     void assignVehicle(Vehicle* v) {
         this->vehicle = v;
     }
@@ -92,4 +108,3 @@ public:
         return "DRIVER";
     }
 };
-```
