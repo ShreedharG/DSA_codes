@@ -12,6 +12,13 @@ enum class Gender {
     OTHER
 };
 
+enum class VehicleType {
+    BIKE,
+    AUTO,
+    SEDAN,
+    SUV
+};
+
 class User {
 protected:
     string userID;
@@ -36,6 +43,7 @@ public:
         : userID(id), name(name), gender(gender), rating(initialRating) {
         validateNumber(mobile);
         validateAadhar(aadhar);
+
         this->mobileNumber = mobile;
         this->aadharNumber = aadhar;
     }
@@ -47,10 +55,7 @@ public:
     string getMobileNumber() const { return mobileNumber; }
     double getRating() const { return rating; }
     
-    virtual void updateRating ( double newRating ) {
-        this->rating = newRating;
-    }
-
+    virtual void updateRating(double newRating) = 0;
     virtual string getRole() const = 0;
 };
 
@@ -73,7 +78,28 @@ public:
 };
 
 
-class Vehicle ;
+class Vehicle {
+protected:
+    string vehicleID;
+    string numberPlate;
+    string model; //`{Company}+{CarName}+{Model}`
+    VehicleType type;
+
+    void validatePlate(const string& plate){
+        if(plate.empty())
+            throw invalid_argument("Invalid plate number");
+    }
+public:
+    Vehicle(const string& ID, const string& plate, const string& mod, VehicleType vt):
+        vehicleID(ID), numberPlate(plate), model(mod), type(vt){
+            validatePlate(plate);
+        }
+    
+    string getVehicleID() const { return vehicleID; }
+    string getNumberPlate() const { return numberPlate; }
+    string getModel() const { return model; }
+    VehicleType getType() const { return type; }
+};
 
 class Driver : public User {
 private:
@@ -89,7 +115,7 @@ public:
     void updateRating(double newRating) override {
         if (newRating > rating) // good behaviour is rewarded quickly
             rating = rating*0.9 + newRating*0.2;
-        else if ( newRating < rating) // bad reviews isn't penalise dratically
+        else if ( newRating < rating) // bad reviews aren't penalise dratically
             rating = rating*0.9 + newRating*0.05;
         
         if(rating > 5.0) rating = 5.0;
